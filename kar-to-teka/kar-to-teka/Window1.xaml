@@ -20,7 +20,7 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="212,159,0,0" TextWrapping="Wrap" Text="Podaj miejsce urodzenia przestępcy" VerticalAlignment="Top" Width="546"/>
         <CheckBox Content="Nieznana" HorizontalAlignment="Left" Margin="37,391,0,0" VerticalAlignment="Top" Height="24" Width="165"/>
         <CheckBox Content="Poszukiwany listem gończym" HorizontalAlignment="Left" Margin="243,358,0,0" VerticalAlignment="Top"/>
-        <Button Content="Dodaj przestępstwa" HorizontalAlignment="Left" Margin="544,283,0,0" VerticalAlignment="Top" Width="214" Height="42"/>
+        <Button Content="Dodaj przestępstwa" HorizontalAlignment="Left" Margin="544,283,0,0" VerticalAlignment="Top" Width="214" Height="42" Click="addPrzestepstwo"/>
         <ListView HorizontalAlignment="Left" Height="100" Margin="243,240,0,0" VerticalAlignment="Top" Width="278">
             <ListView.View>
                 <GridView>

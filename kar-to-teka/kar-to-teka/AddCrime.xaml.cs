@@ -15,19 +15,17 @@ using System.Windows.Shapes;
 namespace kar_to_teka
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Logika interakcji dla klasy Window2.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class AddCrime : Window
     {
-        public Window1()
+
+        public int dlugosc = 0;
+
+        public AddCrime()
         {
             InitializeComponent();
         }
 
-        private void addPrzestepstwo(object sender, RoutedEventArgs e)
-        {
-            Window newWindow = new AddCrime();
-            newWindow.Show();
-        }
     }
 }
