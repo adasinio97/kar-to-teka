@@ -17,9 +17,9 @@ namespace kar_to_teka
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class AddCriminal : Window
     {
-        public Window1()
+        public AddCriminal()
         {
             InitializeComponent();
         }

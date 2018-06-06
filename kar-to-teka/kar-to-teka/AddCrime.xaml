@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kar_to_teka"
         mc:Ignorable="d"
-        Title="Dodaj przestępstwo" Height="450" Width="800">
+        Title="Dodaj przestępstwo" Height="450" Width="800"
+        ResizeMode="NoResize">
     <Grid>
         <Label Content="Paragraf:" HorizontalAlignment="Left" Margin="33,32,0,0" VerticalAlignment="Top"/>
         <ListBox HorizontalAlignment="Left" Height="267" Margin="487,63,0,0" VerticalAlignment="Top" Width="267"/>

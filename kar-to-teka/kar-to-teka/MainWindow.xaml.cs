@@ -30,7 +30,7 @@ namespace kar_to_teka
 
         private void addPrzestepca(object sender, RoutedEventArgs e)
         {
-            Window newWindow = new Window1();
+            Window newWindow = new AddCriminal();
             newWindow.Show();
         }
     }
