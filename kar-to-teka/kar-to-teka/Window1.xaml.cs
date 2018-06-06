@@ -10,28 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace kar_to_teka
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
-
-            StartMongo startMongo = new StartMongo();
-            startMongo.startMongoAsync();
-        }
-
-        private void addPrzestepca(object sender, RoutedEventArgs e)
-        {
-            Window newWindow = new Window1();
-            newWindow.Show();
         }
     }
 }
