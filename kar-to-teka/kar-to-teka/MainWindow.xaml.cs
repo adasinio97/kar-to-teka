@@ -24,5 +24,10 @@ namespace kar_to_teka
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
