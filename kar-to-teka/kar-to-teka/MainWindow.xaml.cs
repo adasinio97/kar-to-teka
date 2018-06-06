@@ -33,5 +33,11 @@ namespace kar_to_teka
             Window newWindow = new AddCriminal();
             newWindow.Show();
         }
+
+        private void showStatistics(object sender, RoutedEventArgs e)
+        {
+            Window newWindow = new Statistics();
+            newWindow.Show();
+        }
     }
 }
