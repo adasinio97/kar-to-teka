@@ -48,9 +48,14 @@ namespace kar_to_teka
                 {"miejsce_zameldowania", new BsonString(zamieszkanie.Text)},
                 //{"poszukiwany", new BsonBoolean(poszukiwany)}
             };
-            System.Diagnostics.Debug.WriteLine(imie.Text);
-            System.Diagnostics.Debug.WriteLine(nazwisko.Text);
+
             StartMongo.collectionPrzestepcy.InsertOne(kryminalista);
+
+            var getData = new StringBuilder();
+            getData.Append("Dodano nowego przestepce: " + imie.Text + ", ");
+            getData.Append(nazwisko.Text + ", ");
+            getData.Append("pseudonim: " + pseudonim.Text + ".");
+            MessageBox.Show(getData.ToString(), "Rezultat");
         }
 
     }
