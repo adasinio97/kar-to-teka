@@ -11,6 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using kar_to_teka;
+using System.Windows.Threading;
 
 namespace kar_to_teka
 {
@@ -28,6 +32,24 @@ namespace kar_to_teka
         {
             Window newWindow = new AddCrime();
             newWindow.Show();
+
         }
+
+        private static void Zatwierdz(object sender, RoutedEventArgs e)
+        {
+            
+            var kryminalista = new BsonDocument
+            {
+                {"imie", new BsonString(imie.Text)},
+                {"nazwisko", new BsonString(nazwisko.Text)},
+                {"pseudonim", new BsonString(pseudonim.Text)},
+                //{"data_urodzenia", new BsonDateTime(data_urodzenia)},
+                {"miejsce_urodzenia", new BsonString(urodzenie.Text)},
+                {"miejsce_zameldowania", new BsonString(zamieszkanie.Text)},
+                //{"poszukiwany", new BsonBoolean(poszukiwany)}
+            };
+            StartMongo.collectionPrzestepcy.InsertOne(kryminalista);
+        }
+
     }
 }

@@ -10,6 +10,10 @@ namespace kar_to_teka
 {
     class StartMongo
     {
+        public static IMongoCollection<BsonDocument> collectionPrzestepstwa = null;
+        public static IMongoCollection<BsonDocument> collectionPrzestepcy = null;
+        public static IMongoCollection<BsonDocument> collectionMiejsca = null;
+
         public async Task startMongoAsync()
         {
             var client = new MongoClient();
@@ -20,9 +24,9 @@ namespace kar_to_teka
             await db.CreateCollectionAsync("przestepcy");
             await db.CreateCollectionAsync("miejsca"); */
 
-            IMongoCollection<BsonDocument> collectionPrzestepstwa = db.GetCollection<BsonDocument>("przestepstwa");
-            IMongoCollection<BsonDocument> collectionPrzestepcy = db.GetCollection<BsonDocument>("przestepcy");
-            IMongoCollection<BsonDocument> collectionMiejsca = db.GetCollection<BsonDocument>("miejsca");
+            collectionPrzestepstwa = db.GetCollection<BsonDocument>("przestepstwa");
+            collectionPrzestepcy = db.GetCollection<BsonDocument>("przestepcy");
+            collectionMiejsca = db.GetCollection<BsonDocument>("miejsca");
 
             var testDocument = new BsonDocument
             {
