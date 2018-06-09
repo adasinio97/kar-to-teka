@@ -35,9 +35,9 @@ namespace kar_to_teka
 
         }
 
-        private static void Zatwierdz(object sender, RoutedEventArgs e)
+        private void Zatwierdz(object sender, RoutedEventArgs e)
         {
-            
+
             var kryminalista = new BsonDocument
             {
                 {"imie", new BsonString(imie.Text)},
@@ -48,6 +48,8 @@ namespace kar_to_teka
                 {"miejsce_zameldowania", new BsonString(zamieszkanie.Text)},
                 //{"poszukiwany", new BsonBoolean(poszukiwany)}
             };
+            System.Diagnostics.Debug.WriteLine(imie.Text);
+            System.Diagnostics.Debug.WriteLine(nazwisko.Text);
             StartMongo.collectionPrzestepcy.InsertOne(kryminalista);
         }
 
