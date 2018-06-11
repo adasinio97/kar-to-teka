@@ -10,7 +10,7 @@
     <Grid>
         <Label Content="Paragraf:" HorizontalAlignment="Left" Margin="33,32,0,0" VerticalAlignment="Top"/>
         <ListBox HorizontalAlignment="Left" Height="267" Margin="487,63,0,0" VerticalAlignment="Top" Width="267"/>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="626,356,0,0" VerticalAlignment="Top" Width="128" Height="36"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="626,356,0,0" VerticalAlignment="Top" Width="128" Height="36" Click="Zatwierdz"/>
         <Label Content="Wybierz przestępstwo:" HorizontalAlignment="Left" Margin="487,32,0,0" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="94,37,0,0" TextWrapping="Wrap" Text="Numer paragrafu" VerticalAlignment="Top"/>
         <Calendar HorizontalAlignment="Left" Margin="33,231,0,0" VerticalAlignment="Top"/>

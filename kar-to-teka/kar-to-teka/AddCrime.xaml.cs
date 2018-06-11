@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,6 @@ namespace kar_to_teka
     /// </summary>
     public partial class AddCrime : Window
     {
-
         public int dlugosc = 0;
 
         public AddCrime()
@@ -27,5 +27,9 @@ namespace kar_to_teka
             InitializeComponent();
         }
 
+        private void Zatwierdz(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
