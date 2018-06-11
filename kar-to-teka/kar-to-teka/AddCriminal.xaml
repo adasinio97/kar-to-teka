@@ -16,7 +16,7 @@
         <Label Content="Miejce zameldowania:" HorizontalAlignment="Left" Margin="37,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.047,-0.145"/>
         <TextBox HorizontalAlignment="Left" Name="imie" Height="23" Margin="212,33,0,0" TextWrapping="Wrap" Text="Podaj imię przestępcy" VerticalAlignment="Top" Width="546"/>
         <TextBox HorizontalAlignment="Left" Name="nazwisko" Height="23" Margin="212,73,0,0" TextWrapping="Wrap" Text="Podaj nazwisko przestępcy" VerticalAlignment="Top" Width="546"/>
-        <Calendar HorizontalAlignment="Left" Name="data_urodzenia" Margin="37,220,0,0" VerticalAlignment="Top"/>
+        <Calendar HorizontalAlignment="Left" Name="data_urodzenia" Margin="37,220,0,0" VerticalAlignment="Top" SelectedDate="03-01-1990" DisplayDate="03-01-1990"/>
         <TextBox HorizontalAlignment="Left" Name="zamieszkanie" Height="23" Margin="212,116,0,0" TextWrapping="Wrap" Text="Podaj miejsce zamieszkania przestępcy" VerticalAlignment="Top" Width="546"/>
         <TextBox HorizontalAlignment="Left" Name="urodzenie" Height="23" Margin="212,159,0,0" TextWrapping="Wrap" Text="Podaj miejsce urodzenia przestępcy" VerticalAlignment="Top" Width="546"/>
         <CheckBox Content="Nieznana" HorizontalAlignment="Left" Margin="37,391,0,0" VerticalAlignment="Top" Height="24" Width="165"/>

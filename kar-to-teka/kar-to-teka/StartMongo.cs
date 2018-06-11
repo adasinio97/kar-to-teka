@@ -10,14 +10,14 @@ namespace kar_to_teka
 {
     class StartMongo
     {
-        public static IMongoCollection<BsonDocument> collectionPrzestepstwa = null;
-        public static IMongoCollection<BsonDocument> collectionPrzestepcy = null;
-        public static IMongoCollection<BsonDocument> collectionMiejsca = null;
+        private static IMongoCollection<BsonDocument> collectionPrzestepstwa = null;
+        private static IMongoCollection<BsonDocument> collectionPrzestepcy = null;
+        private static IMongoCollection<BsonDocument> collectionMiejsca = null;
+
+        private MongoClient client = new MongoClient();
 
         public async Task startMongoAsync()
         {
-            var client = new MongoClient();
-
             IMongoDatabase db = client.GetDatabase("kartoteka");
 
             /* await db.CreateCollectionAsync("przestepstwa");
@@ -38,7 +38,7 @@ namespace kar_to_teka
                 {"poszukiwany", new BsonBoolean(true)}
             };
 
-            collectionPrzestepcy.InsertOne(testDocument);
+            // collectionPrzestepcy.InsertOne(testDocument);
         }
     }
 }

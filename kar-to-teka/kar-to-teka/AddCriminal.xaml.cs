@@ -61,7 +61,7 @@ namespace kar_to_teka
             Window window = this;
             var areTextboxesNull = false;
 
-            var kryminalista = new BsonDocument
+            /* var kryminalista = new BsonDocument
             {
                 {"imie", new BsonString(imie.Text)},
                 {"nazwisko", new BsonString(nazwisko.Text)},
@@ -70,14 +70,41 @@ namespace kar_to_teka
                 {"miejsce_urodzenia", new BsonString(urodzenie.Text)},
                 {"miejsce_zameldowania", new BsonString(zamieszkanie.Text)},
                 //{"poszukiwany", new BsonBoolean(poszukiwany)}
-            };
+            }; */
+            var kryminalista = new BsonDocument();
 
             foreach (TextBox textBox in FindVisualChildren<TextBox>(window))
             {
-                if (textBox.Text == "")
+                if (textBox.Text == " " || textBox.Text == null)
                 {
                     areTextboxesNull = true;
                 }
+            }
+
+            if (!String.IsNullOrWhiteSpace(imie.Text) || !String.IsNullOrEmpty(imie.Text))
+            {
+                BsonElement element = new BsonElement("imie", new BsonString(imie.Text));
+                kryminalista.Add(element);
+            }
+            if (!String.IsNullOrWhiteSpace(nazwisko.Text) || !String.IsNullOrEmpty(nazwisko.Text))
+            {
+                BsonElement element = new BsonElement("nazwisko", new BsonString(nazwisko.Text));
+                kryminalista.Add(element);
+            }
+            if (!String.IsNullOrWhiteSpace(pseudonim.Text) || !String.IsNullOrEmpty(pseudonim.Text))
+            {
+                BsonElement element = new BsonElement("pseudonim", new BsonString(pseudonim.Text));
+                kryminalista.Add(element);
+            }
+            if (!String.IsNullOrWhiteSpace(urodzenie.Text) || !String.IsNullOrEmpty(urodzenie.Text))
+            {
+                BsonElement element = new BsonElement("miejsce_urodzenia", new BsonString(urodzenie.Text));
+                kryminalista.Add(element);
+            }
+            if (!String.IsNullOrWhiteSpace(zamieszkanie.Text) || !String.IsNullOrEmpty(zamieszkanie.Text))
+            {
+                BsonElement element = new BsonElement("miejsce_zamieszkania", new BsonString(zamieszkanie.Text));
+                kryminalista.Add(element);
             }
 
             if (areTextboxesNull == false)

@@ -39,5 +39,10 @@ namespace kar_to_teka
             Window newWindow = new Statistics();
             newWindow.Show();
         }
+
+        private void dropCollections(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

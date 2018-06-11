@@ -46,7 +46,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Wyczyść kartotekę" HorizontalAlignment="Left" Margin="645,215,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.52,-0.873"/>
+        <Button Content="Wyczyść kartotekę" HorizontalAlignment="Left" Margin="645,215,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.52,-0.873" Click="dropCollections"/>
         <Button Content="Edytuj dane" HorizontalAlignment="Left" Margin="645,241,0,0" VerticalAlignment="Top" Width="139"/>
         <Button Content="Dodaj przestępstwo" HorizontalAlignment="Left" Margin="645,266,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.249,-0.676"/>
         <Button Content="Ustaw zdjęcie" HorizontalAlignment="Left" Margin="645,291,0,0" VerticalAlignment="Top" Width="139"/>
