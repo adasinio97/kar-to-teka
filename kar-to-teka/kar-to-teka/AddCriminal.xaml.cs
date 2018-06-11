@@ -23,6 +23,9 @@ namespace kar_to_teka
     /// </summary>
     public partial class AddCriminal : Window
     {
+        private bool isDateKnown = true;
+        private bool isWanted = false;
+
         public AddCriminal()
         {
             InitializeComponent();
@@ -107,6 +110,22 @@ namespace kar_to_teka
                 kryminalista.Add(element);
             }
 
+            if (isDateKnown == true)
+            {
+                BsonElement element = new BsonElement("data_urodzenia", new BsonDateTime((DateTime)data_urodzenia.SelectedDate));
+                kryminalista.Add(element);
+            }
+            if (isWanted == true)
+            {
+                BsonElement element = new BsonElement("poszukiwany", new BsonBoolean(true));
+                kryminalista.Add(element);
+            }
+            else
+            {
+                BsonElement element = new BsonElement("poszukiwany", new BsonBoolean(false));
+                kryminalista.Add(element);
+            }
+
             if (areTextboxesNull == false)
             {
                 MessageBoxResult isUserSure = MessageBox.Show("Czy na pewno chcesz dodać obiekt do bazy danych, bez wszystkich wypełnionych pól?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Warning);
@@ -127,5 +146,22 @@ namespace kar_to_teka
             }
         }
 
+        private void isDateChecked(object sender, RoutedEventArgs e)
+        {
+            isDateKnown = false;
+        }
+        private void isDateUnchecked(object sender, RoutedEventArgs e)
+        {
+            isDateKnown = true;
+        }
+
+        private void isWantedChecked(object sender, RoutedEventArgs e)
+        {
+            isWanted = true;
+        }
+        private void isWantedUnhecked(object sender, RoutedEventArgs e)
+        {
+            isWanted = false;
+        }
     }
 }

@@ -10,9 +10,9 @@ namespace kar_to_teka
 {
     class StartMongo
     {
-        private static IMongoCollection<BsonDocument> collectionPrzestepstwa = null;
-        private static IMongoCollection<BsonDocument> collectionPrzestepcy = null;
-        private static IMongoCollection<BsonDocument> collectionMiejsca = null;
+        public static IMongoCollection<BsonDocument> collectionPrzestepstwa = null;
+        public static IMongoCollection<BsonDocument> collectionPrzestepcy = null;
+        public static IMongoCollection<BsonDocument> collectionMiejsca = null;
 
         private MongoClient client = new MongoClient();
 
