@@ -2,6 +2,7 @@
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,19 +15,30 @@ namespace kar_to_teka
         public static IMongoCollection<BsonDocument> collectionPrzestepcy = null;
         public static IMongoCollection<BsonDocument> collectionMiejsca = null;
 
-        private MongoClient client = new MongoClient();
+        public MongoClient client = new MongoClient();
+        public List<string> listPrzestepcy = new List<string>();
 
         public async Task startMongoAsync()
         {
-            IMongoDatabase db = client.GetDatabase("kartoteka");
-
             /* await db.CreateCollectionAsync("przestepstwa");
             await db.CreateCollectionAsync("przestepcy");
             await db.CreateCollectionAsync("miejsca"); */
 
+            IMongoDatabase db = client.GetDatabase("kartoteka");
+
             collectionPrzestepstwa = db.GetCollection<BsonDocument>("przestepstwa");
             collectionPrzestepcy = db.GetCollection<BsonDocument>("przestepcy");
             collectionMiejsca = db.GetCollection<BsonDocument>("miejsca");
+
+            // await collectionPrzestepstwa.Find(new BsonDocument()).ForEachAsync(x => listPrzestepcy.Add(x.ToString()));
+            var listPrzestepstwa = collectionPrzestepstwa.Find(new BsonDocument()).ToList();
+            int test = 0;
+            foreach (var x in listPrzestepstwa)
+            {
+                listPrzestepcy.Add("TEST");
+                test++;
+                Debug.WriteLine(test);
+            }
 
             var testDocument = new BsonDocument
             {

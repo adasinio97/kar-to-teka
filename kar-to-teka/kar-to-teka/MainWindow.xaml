@@ -20,10 +20,10 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView HorizontalAlignment="Left" Height="399" Margin="125,10,0,0" VerticalAlignment="Top" Width="110">
+        <ListView Name="przestepcy" HorizontalAlignment="Left" Height="399" Margin="125,10,0,0" VerticalAlignment="Top" Width="110" SelectionChanged="chooseCriminal">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Przestępca:" Width="70"/>
                 </GridView>
             </ListView.View>
         </ListView>

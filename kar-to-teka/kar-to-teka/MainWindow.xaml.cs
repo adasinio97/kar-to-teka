@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +28,8 @@ namespace kar_to_teka
 
             StartMongo startMongo = new StartMongo();
             startMongo.startMongoAsync();
+
+            przestepcy.ItemsSource = startMongo.listPrzestepcy;
         }
 
         private void addPrzestepca(object sender, RoutedEventArgs e)
@@ -41,6 +45,11 @@ namespace kar_to_teka
         }
 
         private void dropCollections(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void chooseCriminal(object sender, SelectionChangedEventArgs e)
         {
 
         }
