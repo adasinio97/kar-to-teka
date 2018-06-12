@@ -31,13 +31,13 @@ namespace kar_to_teka
             collectionMiejsca = db.GetCollection<BsonDocument>("miejsca");
 
             // await collectionPrzestepstwa.Find(new BsonDocument()).ForEachAsync(x => listPrzestepcy.Add(x.ToString()));
-            var listPrzestepstwa = collectionPrzestepstwa.Find(new BsonDocument()).ToList();
-            int test = 0;
-            foreach (var x in listPrzestepstwa)
+            var getPrzestepcy = collectionPrzestepcy.Find(new BsonDocument()).ToList();
+            foreach (var x in getPrzestepcy)
             {
-                listPrzestepcy.Add("TEST");
-                test++;
-                Debug.WriteLine(test);
+                var name = x.GetElement("imie");
+                var surname = x.GetElement("nazwisko");
+                string fullName = name.ToString().Substring(5) + " " + surname.ToString().Substring(9);
+                listPrzestepcy.Add(fullName);
             }
 
             var testDocument = new BsonDocument
