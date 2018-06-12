@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kar_to_teka"
         mc:Ignorable="d"
-        Title="Kar-to-teka" Height="455" Width="810"
+        Title="Kar-to-teka" Height="455" Width="920"
         ResizeMode="NoResize">
     <Grid>
         <Button Content="Dodaj" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="-0.174,-1.118" Click="addPrzestepca"/>
@@ -20,40 +20,40 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView Name="przestepcy" HorizontalAlignment="Left" Height="399" Margin="125,10,0,0" VerticalAlignment="Top" Width="110" SelectionChanged="chooseCriminal">
+        <ListView Name="przestepcy" HorizontalAlignment="Left" Height="399" Margin="125,10,0,0" VerticalAlignment="Top" Width="215" SelectionChanged="chooseCriminal">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Przestępca:" Width="70"/>
+                    <GridViewColumn Header="Przestępca:" Width="215"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView HorizontalAlignment="Left" Height="200" Margin="240,10,0,0" VerticalAlignment="Top" Width="400">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Image HorizontalAlignment="Left" Height="200" Margin="645,10,0,0" VerticalAlignment="Top" Width="139"/>
-        <Label Content="Poszukiwany:" HorizontalAlignment="Left" Margin="240,215,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label Content="Data wyjścia:" HorizontalAlignment="Left" Margin="430,215,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBlock HorizontalAlignment="Left" Margin="325,220,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="105"/>
-        <TextBlock HorizontalAlignment="Left" Margin="515,220,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.023,0.224" Width="125"/>
-        <ListView HorizontalAlignment="Left" Height="168" Margin="240,241,0,0" VerticalAlignment="Top" Width="400">
+        <ListView HorizontalAlignment="Left" Height="200" Margin="350,10,0,0" VerticalAlignment="Top" Width="400">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Wyczyść kartotekę" HorizontalAlignment="Left" Margin="645,215,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.52,-0.873" Click="dropCollections"/>
-        <Button Content="Edytuj dane" HorizontalAlignment="Left" Margin="645,241,0,0" VerticalAlignment="Top" Width="139"/>
-        <Button Content="Dodaj przestępstwo" HorizontalAlignment="Left" Margin="645,266,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.249,-0.676"/>
-        <Button Content="Ustaw zdjęcie" HorizontalAlignment="Left" Margin="645,291,0,0" VerticalAlignment="Top" Width="139"/>
-        <Button Content="Zgłoś ucieczkę" HorizontalAlignment="Left" Margin="645,316,0,0" VerticalAlignment="Top" Width="139"/>
-        <Button Content="Dodaj uwagę" HorizontalAlignment="Left" Margin="645,341,0,0" VerticalAlignment="Top" Width="139"/>
-        <Button Content="Wyświetl uwagę" HorizontalAlignment="Left" Margin="645,366,0,0" VerticalAlignment="Top" Width="139"/>
-        <Label Content="Kar-to-teka, 2018 ©" HorizontalAlignment="Left" Margin="645,391,0,0" VerticalAlignment="Top" Width="139" Height="25"/>
+        <Image HorizontalAlignment="Left" Height="200" Margin="755,10,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label Content="Poszukiwany:" HorizontalAlignment="Left" Margin="340,215,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Content="Data wyjścia:" HorizontalAlignment="Left" Margin="530,215,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBlock HorizontalAlignment="Left" Margin="425,220,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="105"/>
+        <TextBlock HorizontalAlignment="Left" Margin="615,220,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.023,0.224" Width="125"/>
+        <ListView HorizontalAlignment="Left" Height="168" Margin="350,241,0,0" VerticalAlignment="Top" Width="400">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Wyczyść kartotekę" HorizontalAlignment="Left" Margin="755,215,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.52,-0.873" Click="dropCollections"/>
+        <Button Content="Edytuj dane" HorizontalAlignment="Left" Margin="755,240,0,0" VerticalAlignment="Top" Width="139"/>
+        <Button Content="Dodaj przestępstwo" HorizontalAlignment="Left" Margin="755,265,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.249,-0.676"/>
+        <Button Content="Ustaw zdjęcie" HorizontalAlignment="Left" Margin="755,291,0,0" VerticalAlignment="Top" Width="139"/>
+        <Button Content="Zgłoś ucieczkę" HorizontalAlignment="Left" Margin="755,316,0,0" VerticalAlignment="Top" Width="139"/>
+        <Button Content="Dodaj uwagę" HorizontalAlignment="Left" Margin="755,341,0,0" VerticalAlignment="Top" Width="139"/>
+        <Button Content="Wyświetl uwagę" HorizontalAlignment="Left" Margin="755,366,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label Content="Kar-to-teka, 2018 ©" HorizontalAlignment="Left" Margin="755,391,0,0" VerticalAlignment="Top" Width="139" Height="25"/>
 
     </Grid>
 </Window>
