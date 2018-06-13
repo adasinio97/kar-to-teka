@@ -1,0 +1,20 @@
+﻿<Window x:Class="kar_to_teka.AddCrimes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kar_to_teka"
+        mc:Ignorable="d"
+        Title="AddCrimes" Height="390" Width="410"
+        ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Podaj numer paragrafu:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.303,-0.479"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Name="numer" Margin="166,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+        <Label Content="Podaj nazwę przestępstwa:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.538,-0.13"/>
+        <TextBox HorizontalAlignment="Left" Name="nazwa" Height="23" Margin="166,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+        <Label Content="Podaj opis przestępstwa:" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Name="opis" Height="230" Margin="166,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+        <Button Content="Dodaj przestępstwo" HorizontalAlignment="Left" Margin="10,301,0,0" VerticalAlignment="Top" Width="371" Height="40" Click="addCrime"/>
+
+    </Grid>
+</Window>

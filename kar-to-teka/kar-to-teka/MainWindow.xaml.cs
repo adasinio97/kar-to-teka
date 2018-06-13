@@ -41,9 +41,9 @@ namespace kar_to_teka
         {
             Window newWindow = new AddCriminal();
             if (newWindow.ShowDialog() == true)
-                System.Windows.MessageBox.Show("Operacja dodania zakończona pomyślnie");
+                System.Windows.MessageBox.Show("Operacja dodania została zakończona pomyślnie.", "Rezultat");
             else
-                System.Windows.MessageBox.Show("Coś poszło nie tak!");
+                System.Windows.MessageBox.Show("Coś poszło nie tak!", "Rezultat");
             this.refreshvoid();
 
         }
@@ -103,19 +103,29 @@ namespace kar_to_teka
         private void apdejt(object sender, RoutedEventArgs e)
         {
             if (przestepcy.SelectedValue == null)
-            { System.Windows.MessageBox.Show("Najpierw wybierz przestępcę!");
+            {
+                System.Windows.MessageBox.Show("Najpierw wybierz przestępcę!", "Uwaga!");
                 return;
             }
 
-
             EditCriminal okno = new EditCriminal(startMongo.listCriminals, (string)przestepcy.SelectedValue);
 
-
             if (okno.ShowDialog() == true)
-                    System.Windows.MessageBox.Show("Operacja modyfikacji zakończona pomyślnie");
+            {
+                System.Windows.MessageBox.Show("Operacja modyfikacji została zakończona pomyślnie.", "Rezultat");
+                c1.Text = c2.Text = c3.Text = c4.Text = c5.Text = c6.Text = c7.Text = "---";
+            }
             else
-                System.Windows.MessageBox.Show("Coś poszło nie tak!");
+            {
+                System.Windows.MessageBox.Show("Coś poszło nie tak!", "Rezultat");
+            }
             this.refreshvoid();
+        }
+
+        private void addPrzestepstwo(object sender, RoutedEventArgs e)
+        {
+            Window newWindow = new AddCrimes();
+            newWindow.Show();
         }
     }
 }

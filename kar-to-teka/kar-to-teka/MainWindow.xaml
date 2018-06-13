@@ -41,7 +41,7 @@
         </ListView>
         <Button Content="Wyczyść kartotekę" HorizontalAlignment="Left" Margin="755,215,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.52,-0.873" Click="dropCollections"/>
         <Button Content="Edytuj dane" HorizontalAlignment="Left" Margin="755,240,0,0" VerticalAlignment="Top" Click="apdejt"  Width="139"/>
-        <Button Content="Dodaj przestępstwo" HorizontalAlignment="Left" Margin="755,265,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.249,-0.676"/>
+        <Button Content="Dodaj przestępstwo" HorizontalAlignment="Left" Margin="755,265,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.249,-0.676" Click="addPrzestepstwo"/>
         <Button Content="Ustaw zdjęcie" HorizontalAlignment="Left" Margin="755,291,0,0" VerticalAlignment="Top" Width="139"/>
         <Button Content="Zgłoś ucieczkę" HorizontalAlignment="Left" Margin="755,316,0,0" VerticalAlignment="Top" Width="139"/>
         <Button Content="Dodaj uwagę" HorizontalAlignment="Left" Margin="755,341,0,0" VerticalAlignment="Top" Width="139"/>

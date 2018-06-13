@@ -78,7 +78,7 @@ namespace kar_to_teka
 
             foreach (TextBox textBox in FindVisualChildren<TextBox>(window))
             {
-                if (textBox.Text == " " || textBox.Text == null)
+                if (String.IsNullOrEmpty(textBox.Text) || String.IsNullOrWhiteSpace(textBox.Text))
                 {
                     areTextboxesNull = true;
                 }
@@ -128,8 +128,19 @@ namespace kar_to_teka
 
             if (areTextboxesNull == false)
             {
+                StartMongo.collectionPrzestepcy.InsertOne(kryminalista);
+
+                var getData = new StringBuilder();
+                getData.Append("Dodano nowego przestepce: " + imie.Text + ", ");
+                getData.Append(nazwisko.Text + ", ");
+                getData.Append("pseudonim: " + pseudonim.Text + " do bazy danych.");
+                MessageBox.Show(getData.ToString(), "Rezultat");
+                DialogResult = true;
+            }
+            else
+            {
                 MessageBoxResult isUserSure = MessageBox.Show("Czy na pewno chcesz dodać obiekt do bazy danych, bez wszystkich wypełnionych pól?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                if (isUserSure == MessageBoxResult.Yes && imie.Text!="" &&nazwisko.Text!="")
+                if (isUserSure == MessageBoxResult.Yes && imie.Text != "" && nazwisko.Text != "")
                 {
                     StartMongo.collectionPrzestepcy.InsertOne(kryminalista);
 
@@ -145,7 +156,6 @@ namespace kar_to_teka
                     MessageBox.Show("Nie dodano nowego przestępcy do bazy danych. Podaj przynajmniej imię i nazwisko!", "Rezultat");
                     DialogResult = false;
                 }
-                
             }
         }
 
