@@ -1,0 +1,27 @@
+﻿<Window x:Class="kar_to_teka.AddCrime"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kar_to_teka"
+        mc:Ignorable="d"
+        Title="Dodaj przestępstwo" Height="450" Width="800"
+        ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Paragraf:" HorizontalAlignment="Left" Margin="33,32,0,0" VerticalAlignment="Top"/>
+        <ListBox HorizontalAlignment="Left" Height="267" Margin="487,63,0,0" VerticalAlignment="Top" Width="267"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="626,356,0,0" VerticalAlignment="Top" Width="128" Height="36" Click="Zatwierdz"/>
+        <Label Content="Wybierz przestępstwo:" HorizontalAlignment="Left" Margin="487,32,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="94,37,0,0" TextWrapping="Wrap" Text="Numer paragrafu" VerticalAlignment="Top"/>
+        <Calendar HorizontalAlignment="Left" Margin="33,231,0,0" VerticalAlignment="Top"/>
+        <Label Content="Data skazania:" HorizontalAlignment="Left" Margin="33,200,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dodatkowy opis:" HorizontalAlignment="Left" Margin="33,58,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="111" Margin="33,84,0,0" TextWrapping="Wrap" Text="Dodaj informacje na temat rozprawy/przestępstwa." VerticalAlignment="Top" Width="433"/>
+        <CheckBox Content="Nieznana" HorizontalAlignment="Left" Margin="144,206,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="160" Margin="236,206,0,0" VerticalAlignment="Top" Width="230" Source="prison.jpg"/>
+        <Slider HorizontalAlignment="Left" Margin="236,371,0,0" VerticalAlignment="Top" Height="21" Width="381" Name="pasek" Minimum="0" Maximum="25" IsSnapToTickEnabled="True" TickFrequency="1"/>
+        <Label Content="Długość kary: " HorizontalAlignment="Left" Margin="487,341,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="577,344,0,0" TextWrapping="Wrap" Text="{Binding ElementName=pasek,Path=Value}" VerticalAlignment="Top" Width="40"/>
+
+    </Grid>
+</Window>
