@@ -62,9 +62,20 @@ namespace kar_to_teka
 
         }
 
-        private void dropCollections(object sender, RoutedEventArgs e)
+        private void clearCollections(object sender, RoutedEventArgs e)
         {
+            if (przestepcy.SelectedValue == null)
+            {
+                System.Windows.MessageBox.Show("Najpierw wybierz przestępcę!");
+                return;
+            }
 
+            Window newWindow = new ClearFile((string)przestepcy.SelectedValue);
+            if (newWindow.ShowDialog() == true)
+                System.Windows.MessageBox.Show("Operacja usunięcia została zakończona pomyślnie.", "Rezultat");
+            else
+                System.Windows.MessageBox.Show("Coś poszło nie tak!", "Rezultat");
+            this.refreshvoid();
         }
 
         private void chooseCriminal(object sender, SelectionChangedEventArgs e)

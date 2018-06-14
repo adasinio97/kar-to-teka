@@ -16,7 +16,7 @@
         <Label Content="Miejce zameldowania:" HorizontalAlignment="Left" Margin="37,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.047,-0.145"/>
         <TextBox HorizontalAlignment="Left" Name="imiee" Height="23" Margin="212,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="329"/>
         <TextBox HorizontalAlignment="Left" Name="nazwiskoe" Height="23" Margin="212,73,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="329"/>
-        <Calendar HorizontalAlignment="Left" Name="data_urodzeniae" Margin="37,220,0,0" VerticalAlignment="Top"/>
+        <Calendar HorizontalAlignment="Left" Name="data_urodzeniae" Margin="37,220,0,0" VerticalAlignment="Top" SelectedDate="10-10-2000" DisplayDate="10-10-2000"/>
         <TextBox HorizontalAlignment="Left" Name="zamieszkaniee" Height="23" Margin="212,116,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="329"/>
         <TextBox HorizontalAlignment="Left" Name="urodzeniee" Height="23" Margin="212,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="329"/>
         <CheckBox Content="Nieznana" HorizontalAlignment="Left" Margin="37,391,0,0" VerticalAlignment="Top" Height="24" Width="165" Checked="isDateChecked" Unchecked="isDateUnchecked"/>

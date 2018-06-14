@@ -78,6 +78,9 @@
     <Compile Include="AddCrimes.xaml.cs">
       <DependentUpon>AddCrimes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ClearFile.xaml.cs">
+      <DependentUpon>ClearFile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditCriminal.xaml.cs">
       <DependentUpon>EditCriminal.xaml</DependentUpon>
     </Compile>
@@ -92,6 +95,10 @@
       <DependentUpon>Statistics.xaml</DependentUpon>
     </Compile>
     <Page Include="AddCrimes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClearFile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

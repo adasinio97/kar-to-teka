@@ -1,0 +1,21 @@
+﻿<Window x:Class="kar_to_teka.ClearFile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kar_to_teka"
+        mc:Ignorable="d"
+        Title="Wyczyść kartotekę" Height="400" Width="340"
+        ResizeMode="NoResize">
+    <Grid>
+        <ComboBox Name="wybor" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" ItemsSource="{Binding}" IsEditable="True" SelectionChanged="chooseCrime"/>
+        <Label Content="Numer paragrafu:" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="numer" HorizontalAlignment="Left" Margin="10,63,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" RenderTransformOrigin="-0.087,0.034" Width="300"/>
+        <Label Content="Data skazania:" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="data" HorizontalAlignment="Left" Margin="10,110,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Width="300"/>
+        <Label Content="Opis przestępstwa:" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="opis" HorizontalAlignment="Left" Margin="10,162,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Width="300" Height="140"/>
+        <Button Content="Usuń przestępstwo" HorizontalAlignment="Left" Margin="10,307,0,0" VerticalAlignment="Top" Width="300" Height="40" Click="deleteCrime"/>
+
+    </Grid>
+</Window>

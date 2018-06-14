@@ -30,7 +30,7 @@ namespace kar_to_teka
             public int numer { get; set; }
             public string nazwa { get; set; }
         }
-        List<paragraf> listParagrafy= new List<paragraf> { };
+        List<paragraf> listParagrafy = new List<paragraf> { };
 
         internal AddCrime(string par1)
         {
@@ -65,9 +65,9 @@ namespace kar_to_teka
                 return;
             }
 
-            BsonDocument doDodania= new BsonDocument();
+            BsonDocument doDodania = new BsonDocument();
 
-                BsonElement element1 = new BsonElement("winny", new BsonString(winny.Substring(4)));
+            BsonElement element1 = new BsonElement("winny", new BsonString(winny.Substring(4)));
             BsonElement element2 = new BsonElement("paragraf", new BsonInt32((int)paragrafik.SelectedValue));
             BsonElement element3 = new BsonElement("data_skazania", new BsonDateTime((DateTime)data_skaz.SelectedDate));
             BsonElement element4 = new BsonElement("dlugosc_wyroku", new BsonInt32((int)pasek.Value));

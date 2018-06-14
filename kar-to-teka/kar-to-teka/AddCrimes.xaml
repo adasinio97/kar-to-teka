@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kar_to_teka"
         mc:Ignorable="d"
-        Title="AddCrimes" Height="390" Width="410"
+        Title="Dodaj przestępstwa" Height="390" Width="410"
         ResizeMode="NoResize">
     <Grid>
         <Label Content="Podaj numer paragrafu:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.303,-0.479"/>
