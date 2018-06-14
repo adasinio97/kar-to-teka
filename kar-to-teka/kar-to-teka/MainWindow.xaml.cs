@@ -37,6 +37,20 @@ namespace kar_to_teka
             //przestepcy.ItemsSource = startMongo.listPrzestepcy;
         }
 
+        private void nieladnie(object sender, RoutedEventArgs e)
+        {
+            if (przestepcy.SelectedValue== null)
+            {
+                System.Windows.MessageBox.Show("Najpierw wybierz przestępcę!");
+                return;
+            }
+            Window newWindow = new AddCrime((string)przestepcy.SelectedValue);
+            if(newWindow.ShowDialog() == false)
+                System.Windows.MessageBox.Show("Coś poszło nie tak!");
+
+
+        }
+
         private void addPrzestepca(object sender, RoutedEventArgs e)
         {
             Window newWindow = new AddCriminal();

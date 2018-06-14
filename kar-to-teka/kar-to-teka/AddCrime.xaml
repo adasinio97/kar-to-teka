@@ -5,23 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kar_to_teka"
         mc:Ignorable="d"
-        Title="Dodaj przestępstwo" Height="450" Width="800"
+        Title="Dodaj przestępstwo" Height="447.6" Width="502.133"
         ResizeMode="NoResize">
-    <Grid>
+    <Grid Margin="0,0,3.8,-0.2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="182*"/>
+            <RowDefinition Height="219*"/>
+        </Grid.RowDefinitions>
         <Label Content="Paragraf:" HorizontalAlignment="Left" Margin="33,32,0,0" VerticalAlignment="Top"/>
-        <ListBox HorizontalAlignment="Left" Height="267" Margin="487,63,0,0" VerticalAlignment="Top" Width="267"/>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="626,356,0,0" VerticalAlignment="Top" Width="128" Height="36" Click="Zatwierdz"/>
-        <Label Content="Wybierz przestępstwo:" HorizontalAlignment="Left" Margin="487,32,0,0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="94,37,0,0" TextWrapping="Wrap" Text="Numer paragrafu" VerticalAlignment="Top"/>
-        <Calendar HorizontalAlignment="Left" Margin="33,231,0,0" VerticalAlignment="Top"/>
-        <Label Content="Data skazania:" HorizontalAlignment="Left" Margin="33,200,0,0" VerticalAlignment="Top"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="217,180.4,0,0" VerticalAlignment="Top" Width="249" Height="30" Click="Zatwierdz" Grid.Row="1"/>
+        <Calendar HorizontalAlignment="Left" Name="data_skaz" Margin="33,44.4,0,0" VerticalAlignment="Top" Grid.Row="1" DisplayDate="10-10-2000" SelectedDate="10-10-2000"/>
         <Label Content="Dodatkowy opis:" HorizontalAlignment="Left" Margin="33,58,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="111" Margin="33,84,0,0" TextWrapping="Wrap" Text="Dodaj informacje na temat rozprawy/przestępstwa." VerticalAlignment="Top" Width="433"/>
-        <CheckBox Content="Nieznana" HorizontalAlignment="Left" Margin="144,206,0,0" VerticalAlignment="Top"/>
-        <Image HorizontalAlignment="Left" Height="160" Margin="236,206,0,0" VerticalAlignment="Top" Width="230" Source="prison.jpg"/>
-        <Slider HorizontalAlignment="Left" Margin="236,371,0,0" VerticalAlignment="Top" Height="21" Width="381" Name="pasek" Minimum="0" Maximum="25" IsSnapToTickEnabled="True" TickFrequency="1"/>
-        <Label Content="Długość kary: " HorizontalAlignment="Left" Margin="487,341,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="577,344,0,0" TextWrapping="Wrap" Text="{Binding ElementName=pasek,Path=Value}" VerticalAlignment="Top" Width="40"/>
+        <TextBox HorizontalAlignment="Left" Height="111" Margin="33,84,0,0" TextWrapping="Wrap" Name="Dodatkowy" Text="Dodaj informacje na temat rozprawy/przestępstwa." VerticalAlignment="Top" Width="433" Grid.RowSpan="2"/>
+        <Slider HorizontalAlignment="Left" Margin="33,13.4,0,0" VerticalAlignment="Top" Height="21" Width="433" Name="pasek" Minimum="1" Maximum="25" IsSnapToTickEnabled="True" TickFrequency="1" Grid.Row="1"/>
+        <Label Content="Długość kary: " HorizontalAlignment="Left" Margin="336,39.4,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Name="licznik" Height="23" Margin="426,39.4,0,0" TextWrapping="Wrap" Text="{Binding ElementName=pasek,Path=Value}" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.508,0.409" Grid.Row="1"/>
+        <ComboBox HorizontalAlignment="Left" Name="paragrafik" IsEditable="True" Margin="94,35,0,0" VerticalAlignment="Top" ItemsSource="{Binding}" Width="372"/>
 
     </Grid>
 </Window>

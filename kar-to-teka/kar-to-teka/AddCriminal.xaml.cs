@@ -31,12 +31,7 @@ namespace kar_to_teka
             InitializeComponent();
         }
 
-        private void addPrzestepstwo(object sender, RoutedEventArgs e)
-        {
-            Window newWindow = new AddCrime();
-            newWindow.Show();
-
-        }
+        
 
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {

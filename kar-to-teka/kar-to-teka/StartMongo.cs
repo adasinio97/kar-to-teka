@@ -14,6 +14,8 @@ namespace kar_to_teka
         public static IMongoCollection<BsonDocument> collectionPrzestepstwa = null;
         public static IMongoCollection<BsonDocument> collectionPrzestepcy = null;
         public static IMongoCollection<BsonDocument> collectionMiejsca = null;
+        public static IMongoCollection<BsonDocument> collectionUwagi = null;
+        public static IMongoCollection<BsonDocument> collectionPopelnione = null;
 
         public MongoClient client = new MongoClient();
         public List<string> listPrzestepcy = new List<string>();
@@ -30,6 +32,8 @@ namespace kar_to_teka
             collectionPrzestepstwa = db.GetCollection<BsonDocument>("przestepstwa");
             collectionPrzestepcy = db.GetCollection<BsonDocument>("przestepcy");
             collectionMiejsca = db.GetCollection<BsonDocument>("miejsca");
+            collectionUwagi = db.GetCollection<BsonDocument>("uwagi");
+            collectionPopelnione = db.GetCollection<BsonDocument>("popelnione");
 
             updateLists();
 

@@ -28,10 +28,8 @@
             </ListView.View>
         </ListView>
         <Image HorizontalAlignment="Left" Height="200" Margin="755,10,0,0" VerticalAlignment="Top" Width="139"/>
-        <Label Content="Poszukiwany:" HorizontalAlignment="Left" Margin="340,215,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label Content="Data wyjścia:" HorizontalAlignment="Left" Margin="530,215,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBlock HorizontalAlignment="Left" Margin="425,220,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="105"/>
-        <TextBlock HorizontalAlignment="Left" Margin="615,220,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.023,0.224" Width="125"/>
+        <Label Content="Data wyjścia:" HorizontalAlignment="Left" Margin="120,355,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,386,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.023,0.224" Width="221"/>
         <ListView HorizontalAlignment="Left" Height="168" Margin="350,241,0,0" VerticalAlignment="Top" Width="400">
             <ListView.View>
                 <GridView>
@@ -41,7 +39,7 @@
         </ListView>
         <Button Content="Wyczyść kartotekę" HorizontalAlignment="Left" Margin="755,215,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.52,-0.873" Click="dropCollections"/>
         <Button Content="Edytuj dane" HorizontalAlignment="Left" Margin="755,240,0,0" VerticalAlignment="Top" Click="apdejt"  Width="139"/>
-        <Button Content="Dodaj przestępstwo" HorizontalAlignment="Left" Margin="755,265,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.249,-0.676" Click="addPrzestepstwo"/>
+        <Button Content="Dodaj akt prawny" HorizontalAlignment="Left" Margin="755,265,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.249,-0.676" Click="addPrzestepstwo" />
         <Button Content="Ustaw zdjęcie" HorizontalAlignment="Left" Margin="755,291,0,0" VerticalAlignment="Top" Width="139"/>
         <Button Content="Zgłoś ucieczkę" HorizontalAlignment="Left" Margin="755,316,0,0" VerticalAlignment="Top" Width="139"/>
         <Button Content="Dodaj uwagę" HorizontalAlignment="Left" Margin="755,341,0,0" VerticalAlignment="Top" Width="139"/>
@@ -62,6 +60,7 @@
         <TextBlock Name="c6" HorizontalAlignment="Left" Margin="126,285,0,0" Text ="---" TextWrapping="Wrap"  VerticalAlignment="Top"/>
         <Label Content="Pseudonim:" HorizontalAlignment="Left" Margin="124,306,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.562,-0.566" Width="219"/>
         <TextBlock Name="c7" HorizontalAlignment="Left" Margin="126,331,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="19" Width="219"/>
+        <Button Content="Dodaj popełnione przestępstwo" HorizontalAlignment="Left" Margin="350,215,0,0" VerticalAlignment="Top" Width="400" Height="21" Click="nieladnie" />
 
     </Grid>
 </Window>

@@ -5,33 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kar_to_teka"
         mc:Ignorable="d"
-        Title="Formularz dodawania przestępcy" Height="450" Width="800"
+        Title="Formularz dodawania przestępcy" Height="450" Width="500"
         ResizeMode="NoResize">
-    <Grid>
-        <Button Content="Dodaj przestępcę" HorizontalAlignment="Left" Margin="544,344,0,0" VerticalAlignment="Top" Width="214" Height="42" Click="Zatwierdz"/>
+    <Grid Margin="0,0,3.6,0">
+        <Button Content="Dodaj przestępcę" HorizontalAlignment="Left" Margin="243,344,0,0" VerticalAlignment="Top" Width="214" Height="42" Click="Zatwierdz"/>
         <Label Content="Imię:" HorizontalAlignment="Left" Margin="37,29,0,0" VerticalAlignment="Top" Height="33" Width="72"/>
         <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="37,70,0,0" VerticalAlignment="Top"/>
         <Label Content="Data urodzenia:" HorizontalAlignment="Left" Margin="37,194,0,0" VerticalAlignment="Top"/>
         <Label Content="Miejsce urodzenia:" HorizontalAlignment="Left" Margin="37,156,0,0" VerticalAlignment="Top"/>
         <Label Content="Miejce zameldowania:" HorizontalAlignment="Left" Margin="37,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.047,-0.145"/>
-        <TextBox HorizontalAlignment="Left" Name="imie" Height="23" Margin="212,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="546"/>
-        <TextBox HorizontalAlignment="Left" Name="nazwisko" Height="23" Margin="212,73,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="546"/>
+        <TextBox HorizontalAlignment="Left" Name="imie" Height="29" Margin="212,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="245"/>
+        <TextBox HorizontalAlignment="Left" Name="nazwisko" Height="23" Margin="212,73,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="245"/>
         <Calendar HorizontalAlignment="Left" Name="data_urodzenia" Margin="37,220,0,0" VerticalAlignment="Top" SelectedDate="03-01-1990" DisplayDate="03-01-1990"/>
-        <TextBox HorizontalAlignment="Left" Name="zamieszkanie" Height="23" Margin="212,116,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="546"/>
-        <TextBox HorizontalAlignment="Left" Name="urodzenie" Height="23" Margin="212,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="546"/>
-        <CheckBox Content="Nieznana" HorizontalAlignment="Left" Margin="37,391,0,0" VerticalAlignment="Top" Height="24" Width="165" Checked="isDateChecked" Unchecked="isDateUnchecked"/>
-        <CheckBox Content="Poszukiwany listem gończym" Name="poszukiwany" HorizontalAlignment="Left" Margin="243,358,0,0" VerticalAlignment="Top"/>
-        <Button Content="Dodaj przestępstwa" HorizontalAlignment="Left" Margin="544,283,0,0" VerticalAlignment="Top" Width="214" Height="42" Click="addPrzestepstwo"/>
-        <ListView HorizontalAlignment="Left" Height="100" Margin="243,240,0,0" VerticalAlignment="Top" Width="278">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <TextBox HorizontalAlignment="Left" Height="23" Name="pseudonim" Margin="544,240,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="214"/>
-        <Label Content="Pseudonim:" HorizontalAlignment="Left" Margin="544,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.224,0.715" Width="80"/>
-        <Label Content="Lista przestępstw:" HorizontalAlignment="Left" Margin="243,217,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Name="zamieszkanie" Height="23" Margin="212,116,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="245"/>
+        <TextBox HorizontalAlignment="Left" Name="urodzenie" Height="23" Margin="212,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="245"/>
+        <CheckBox Content="Nieznana" HorizontalAlignment="Left" Margin="135,200,0,0" VerticalAlignment="Top" Height="24" Width="165" Checked="isDateChecked" Unchecked="isDateUnchecked"/>
+        <CheckBox Content="Poszukiwany listem gończym" Name="poszukiwany" HorizontalAlignment="Left" Margin="243,323,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Name="pseudonim" Margin="243,254,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="214"/>
+        <Label Content="Pseudonim:" HorizontalAlignment="Left" Margin="243,223,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.224,0.715" Width="80"/>
 
     </Grid>
 </Window>
